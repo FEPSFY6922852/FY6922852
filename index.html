@@ -28,6 +28,20 @@
                 background-color: #dddddd;
                 
               }
+            .analysis-container {
+                display: flex:
+                align-items: flex-start;
+                gap: 20px;
+                margin-left: 250px;
+            }
+            .analysis-text {
+                flex: 2;
+            }
+            .analysis-image img{
+              max-width: 280px;
+              height : auto;
+              border-radius: 8px;
+            }
 </style>
   <button id="colorButton">Click me to change colour</button>
   
@@ -114,7 +128,8 @@ and Francis H Wenham, who was responsible for building the first wind tunnel to 
 <hr>
            <h3 id="Analysis and discussion">Analysis and discussion</h3>
 
-<div class="section-container">
+<div class="analysis-container">
+  <div class ="Discussion_InText">
              
 <pre id="Discussion_InText" class="ex1">
 Four primary flap types have been developed over the course of aviation history: Fowler flaps, slotted flaps, split flaps, and plain flaps.
@@ -145,8 +160,10 @@ Drag is caused by a lot of factors. Such being the shape of the plane, and the r
 The extending of flaps also increases drag as there is a larger area for friction between the wing and air. And it can be reduced by making objects smoother and more streamlined in shape. 
 Another type of drag is induced drag. It is simply a by-product of creating lift caused by wingtip vortices and downwash of air from the wing
   </pre>
-
+  </div>
+  <div class="analysis-image">
   <img src="commonflaps.png" alt="Visual aid of flaps">
+  </div>
     </div>
 <hr>
           <h3 id="Conclusion">Conclusion</h3>
