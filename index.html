@@ -1,10 +1,34 @@
 <!DOCTYPE html>
 
 <html>
-
+<head>
   <title>Change Button Colour</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-
+   <!style for tables>
+          <style>
+            p.ex1 {margin-left: 250px;}
+            .mySlides {display:none;}
+                table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 30%;
+                  
+              }
+            
+              td, th {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+                
+              }
+            
+              tr:nth-child(even) {
+                background-color: #dddddd;
+                
+              }
+</style>
   <button id="colorButton">Click me to change colour</button>
   
   <script>
@@ -24,8 +48,10 @@
       // Add a click event listener to the button
       button.addEventListener("click", changeColor);
   </script>
-
-  <head>
+</head>
+  <body style="background-color:#ffffff;margin-left:50px;">
+<button id="colorButton">Click me to change colour</button>
+    
 <hr style="colour:#000000;">
   
     <img src="WebBanner2023.png" alt="Banner" width="1200" height="300">
@@ -34,48 +60,8 @@
     <hr>
     <h2 style=”font-family:calibri:”><b>Conference paper: The Evolution of Wingflaps; How a Simple Idea Transformed Flight</b></h2>
     <hr>    
-        <!style for tables>
-          <style>
-                table {
-                font-family: arial, sans-serif;
-                border-collapse: collapse;
-                width: 30%;
-                  
-              }
-            
-              td, th {
-                border: 1px solid #dddddd;
-                text-align: left;
-                padding: 8px;
-                
-              }
-            
-              tr:nth-child(even) {
-                background-color: #dddddd;
-                
-              }
-
-
-            
-        </style>
-        </head>
-    <style>
-p.ex1 {
-  margin-left: 250px;
-}
-</style>
-  
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <style>
-        .mySlides {display:none;}
-        </style>
-         <body style="background-color:#ffffff;margin-left:50px;">
-           
-
-           
-    <!table of contents>
+       
+       <!table of contents>
     <table>
       
     <tr>
@@ -204,15 +190,13 @@ Joel, N. (2020) How Do Fowler Flaps Work. Available at: How Do Fowler Flaps Work
 <hr>
 <script>
   // Function to calculate and display word count for a specified section
-  function displayWordCount(sectionId, outputId) {
+  function displayWordCount(sectionId) {
     // Get the text content from the specified section
     const text = document.getElementById(sectionId).textContent;
     // Split text into words based on spaces and filter out any empty strings
     const wordArray = text.trim().split(/\s+/);
     // Count the words
-    const wordCount = wordArray.length;
-    // Return the word count for summing purposes   Conclusion_InText
-    return wordCount;
+    return wordArray.length;
   }
   // Function to calculate and display total word count from selected sections
   function displayTotalWordCount() {
@@ -225,11 +209,16 @@ Joel, N. (2020) How Do Fowler Flaps Work. Available at: How Do Fowler Flaps Work
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
-  // Run the function for specific sections and display total count when the page loads
-  window.onload = displayTotalWordCount;
+//call both word and last update on page load
+   window.onload = function() {
+    displayTotalWordCount();
+    getLastUpdatedTime();
+  };
+  
+  
 </script>
 
-           
+
    <div id="last-updated">Loading last update time...</div>
 <!-- Verify Button -->
 <button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 8px 16px;">Verify Last Modified Time</button>
@@ -270,9 +259,9 @@ Joel, N. (2020) How Do Fowler Flaps Work. Available at: How Do Fowler Flaps Work
         alert("Last modified time has been successfully verified from GitHub API.");
     }
     // Initial load to display the time on page load
-    window.onload = getLastUpdatedTime;
+     
 </script>
 
-         </body>
-  </head>
+  </body> 
+  
       </html>
