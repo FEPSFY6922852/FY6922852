@@ -90,7 +90,9 @@ p.ex1 {
     <tr>
       <td><a href="#Analysis and discussion">Analysis and discussion</td>
     </tr>
-      
+    <tr>
+      <td><a href="#Conclusion">Conclusion</td>
+    </tr>  
     <tr>
       <td><a href="#References">References</td>
     </tr>
@@ -159,6 +161,20 @@ Another type of drag is induced drag. It is simply a by-product of creating lift
   </pre>
          </p>
 <hr>
+          <h3 id="Conclusion">Conclusion</h3>
+
+<p class="ex1">
+             
+<pre>
+From early pioneers such as Cayley to the modern engineering of these flaps, the science behind aviation has evolved immensely through years of experimentation and innovation. 
+Cayley’s early connection from a birds cambered wing to his own fixed wings helped lay the foundation for aerodynamics, allowing engineers to later refine the relationship between wing and air. 
+The invention of flaps marked a turning point in flight giving pilots the ability to control lift and drag. Each type, from the plain flap to the slotted-Fowler flap represents a step towards safer,
+more efficient and versatile flight. Ultimately, this deep study into lift and drag shows that even the smallest mechanical changes can have a huge impact on how we conquer the skies.
+
+
+  </pre>
+         </p>
+  <hr>
            <h3 id="References">References</h3>
 
 <p class="ex1">
@@ -197,10 +213,11 @@ Joel, N. (2020) How Do Fowler Flaps Work. Available at: How Do Fowler Flaps Work
   // Function to calculate and display total word count from selected sections
   function displayTotalWordCount() {
     // Calculate word count for each section and accumulate the total
-    const IntroductionCount = displayWordCount("Introduction_InText");
-    const AnalysisCount = displayWordCount("Analysis_InText");
+    const IntroductionCount = displayWordCount("History");
+    const AnalysisCount = displayWordCount("Analysis and discussion");
+    const ConclusionCount = displayWordCount("Conclusion");
     // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount + AnalysisCount;
+    const totalWordCount = IntroductionCount + AnalysisCount + ConclusionCount;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
