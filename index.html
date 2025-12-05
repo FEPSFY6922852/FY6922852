@@ -115,22 +115,22 @@ This article will explore their origins, and heavy impact on aviation today.
       <hr>      
             <h3 id="History">History</h3>
 
-<p class="ex1">
+
              
-<pre>
+<pre id="History_InText" class="ex1">
 George Cayley was one of the first pioneers of aircraft, being the first to move from ornithopter like devices to fixed wing aircraft. (Bilstein 2025) 
 He discovered that the cambered nature of a bird’s wing produced much more lift than a flat wing (Bilstein 2025). This was due to Bernoulli’s principle. 
 The curved top half of the wing was longer; therefore, air must travel faster over it. Resulting in a slower moving, higher-pressure air beneath the wing, 
 pushing it upwards. Following George Cayley, others began studying the science of wings, most notably  the Wright brothers and Francis H Wenham,
 who was responsible for building the first wind tunnel. (Bilstein 2025)
   </pre>
-         </p>
+         
 <hr>
            <h3 id="Analysis and discussion">Analysis and discussion</h3>
 
-<p class="ex1">
+
              
-<pre>
+<pre id="Discussion_InText" class="ex1">
 Four primary flap types have been developed over the course of aviation history: Fowler flaps, slotted flaps, split flaps, and plain flaps.
 
 The most basic are the plain flaps, which are hinged panels on the wing's trailing edge that, when triggered, pivot downward. However, the amount of lift 
@@ -159,13 +159,13 @@ Drag is caused by a lot of factors. Such being the shape of the plane, and the r
 The extending of flaps also increases drag as there is a larger area for friction between the wing and air. And it can be reduced by making objects smoother and more streamlined in shape. 
 Another type of drag is induced drag. It is simply a by-product of creating lift caused by wingtip vortices and downwash of air from the wing
   </pre>
-         </p>
+         
 <hr>
           <h3 id="Conclusion">Conclusion</h3>
 
-<p class="ex1">
+
              
-<pre>
+<pre id="Conclusion_InText" class="ex1">
 From early pioneers such as Cayley to the modern engineering of these flaps, the science behind aviation has evolved immensely through years of experimentation and innovation. 
 Cayley’s early connection from a birds cambered wing to his own fixed wings helped lay the foundation for aerodynamics, allowing engineers to later refine the relationship between wing and air. 
 The invention of flaps marked a turning point in flight giving pilots the ability to control lift and drag. Each type, from the plain flap to the slotted-Fowler flap represents a step towards safer,
@@ -173,7 +173,7 @@ more efficient and versatile flight. Ultimately, this deep study into lift and d
 
 
   </pre>
-         </p>
+         
   <hr>
            <h3 id="References">References</h3>
 
@@ -196,7 +196,11 @@ Joel, N. (2020) How Do Fowler Flaps Work. Available at: How Do Fowler Flaps Work
          </p>
   <hr>
 
-           <p id="totalWordCount"></p>
+<!-- //////////////////////////////////////////////////////////////////////////////// -->
+  <!-- ////////////////////////////// Word count function ////////////////////////////// -->
+  <!-- //////////////////////////////////////////////////////////////////////////////// -->
+<!-- Placeholder for total word count -->
+<p id="totalWordCount"></p>
 <hr>
 <script>
   // Function to calculate and display word count for a specified section
@@ -207,15 +211,15 @@ Joel, N. (2020) How Do Fowler Flaps Work. Available at: How Do Fowler Flaps Work
     const wordArray = text.trim().split(/\s+/);
     // Count the words
     const wordCount = wordArray.length;
-    // Return the word count for summing purposes
+    // Return the word count for summing purposes   Conclusion_InText
     return wordCount;
   }
   // Function to calculate and display total word count from selected sections
   function displayTotalWordCount() {
     // Calculate word count for each section and accumulate the total
-    const IntroductionCount = displayWordCount("History");
-    const AnalysisCount = displayWordCount("Analysis and discussion");
-    const ConclusionCount = displayWordCount("Conclusion");
+    const IntroductionCount = displayWordCount("Introduction_InText");
+    const AnalysisCount = displayWordCount("Discussion_InText");
+    const ConclusionCount = displayWordCount("Conclusion_InText");
     // Calculate the sum of all selected sections
     const totalWordCount = IntroductionCount + AnalysisCount + ConclusionCount;
     // Display the total word count
